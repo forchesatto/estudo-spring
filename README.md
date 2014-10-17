@@ -35,3 +35,13 @@ Exemplos: https://github.com/spring-projects/spring-boot/tree/master/spring-boot
 Projeto spring-boot-jsp-jpa é a junção de alguns exemplo do spring-boot-samples em um único projeto. O mesmo possui uma página web para cadastro de produto bem simples, mas que já dá para ter uma ideia da facilidade de start no desenvolvimento de uma aplicação CRUD Web.
 
 Neste exemplo foi utilizado Spring-MVC, HTML básico no front e Spring-Data-JPA para persistência.
+
+A base de dados esta em postgres para utilizar a base padrão basta retirar as configurações do arquivo application.properties e adicionar a dependência.
+
+<code>
+  <dependency>
+    <groupId>org.hsqldb</groupId>
+    <artifactId>hsqldb</artifactId>
+    <scope>runtime</scope>
+  </dependency>
+</code>
