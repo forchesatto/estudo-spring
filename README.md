@@ -36,12 +36,4 @@ Projeto spring-boot-jsp-jpa é a junção de alguns exemplo do spring-boot-sampl
 
 Neste exemplo foi utilizado Spring-MVC, HTML básico no front e Spring-Data-JPA para persistência.
 
-A base de dados esta em postgres para utilizar a base padrão basta retirar as configurações do arquivo application.properties e adicionar a dependência.
-
-<code>
-  <dependency>
-    <groupId>org.hsqldb</groupId>
-    <artifactId>hsqldb</artifactId>
-    <scope>runtime</scope>
-  </dependency>
-</code>
+A base de dados esta em postgres para utilizar a base padrão basta retirar as configurações do arquivo application.properties e adicionar a dependência para o groupId=org.hsqldb artifactId=hsqldb
