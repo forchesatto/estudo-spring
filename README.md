@@ -20,3 +20,14 @@ No eclipse basta criar um Run adicionando o código anterior em VM arguments.
 Pode também configurar através do console
 
 <code>java -javaagent:<pathTo>/springloaded-{VERSION}.jar -noverify</code>
+
+<h3>Spring-Boot Básico</h3>
+
+Projeto spring-boot-ioc é um teste inicial com Spring-Boot, Bootstrap da Pivot que facilita e muito o inicio do desenvolvimento de projetos com Spring. Como poucas linhas já temos uma aplicação funcional, sem xml e sem configurações consideradas triviais.
+
+Documentação:
+Site oficial: http://projects.spring.io/spring-boot/
+
+Exemplos: https://github.com/spring-projects/spring-boot/tree/master/spring-boot-samples
+
+
