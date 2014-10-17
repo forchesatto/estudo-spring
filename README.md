@@ -30,4 +30,8 @@ Site oficial: http://projects.spring.io/spring-boot/
 
 Exemplos: https://github.com/spring-projects/spring-boot/tree/master/spring-boot-samples
 
+<h3>Spring-Boot JSP Tomcat e Spring-Data-JPA</h3>
 
+Projeto spring-boot-jsp-jpa é a junção de alguns exemplo do spring-boot-samples em um único projeto. O mesmo possui uma página web para cadastro de produto bem simples, mas que já dá para ter uma ideia da facilidade de start no desenvolvimento de uma aplicação CRUD Web.
+
+Neste exemplo foi utilizado Spring-MVC, HTML básico no front e Spring-Data-JPA para persistência.
