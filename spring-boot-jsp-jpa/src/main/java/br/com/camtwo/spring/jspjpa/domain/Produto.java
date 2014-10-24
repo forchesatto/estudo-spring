@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 @Entity
 public class Produto {
 
@@ -12,9 +14,12 @@ public class Produto {
 	@GeneratedValue
 	private Long codigo;
 
+	@NotEmpty
 	@Column(nullable = false)
 	private String nome;
-
+	
+	private Double valor;
+	
 	public Produto() {
 
 	}
@@ -38,5 +43,14 @@ public class Produto {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+
+	public Double getValor() {
+		return valor;
+	}
+
+	public void setValor(Double valor) {
+		this.valor = valor;
+	}
+
 
 }

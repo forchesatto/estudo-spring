@@ -3,6 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html lang="pt-br">
 <body>
+	${mensagem}
 	<ul>
 		<c:forEach items="${produtos}" var="produto">
 			<li><a href="/produto/${produto.codigo}">${produto.nome}</a></li>
