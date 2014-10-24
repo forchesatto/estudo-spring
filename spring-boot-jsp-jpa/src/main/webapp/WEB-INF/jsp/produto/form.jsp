@@ -9,6 +9,7 @@
 	<input type="text" name="nome" id="nome" value="${produto.nome}">
 	<form:errors path="produto.nome" />
 	<input type="text" name="valor" id="valor" value="${produto.valor}">
+	<form:errors path="produto.valor" />
 	<input type="submit" value="Salvar"/>
 </form>
 </body>
