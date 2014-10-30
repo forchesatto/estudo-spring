@@ -33,7 +33,7 @@ public class ProdutoControllerTest {
 
 	@Test
 	public void testInserirProduto() throws Exception {
-		mvc.perform(post("/produto/").param("nome", "Produto de teste"))
+		mvc.perform(post("/produto/").param("nome", "Produto de teste").param("valor", "10.0"))
 				.andExpect(status().is3xxRedirection())
 				.andExpect(redirectedUrl("/produto/"));
 	}
