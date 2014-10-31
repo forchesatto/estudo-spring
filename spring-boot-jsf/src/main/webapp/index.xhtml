@@ -1,15 +1,16 @@
-<f:view xmlns="http://www.w3c.org/1999/xhtml"
-	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:h="http://java.sun.com/jsf/html">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
 	<h:head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<title>#{index.titulo}</title>
+		<title>${index.titulo}</title>
 	</h:head>
 	<h:body>
 		<h:form>
-			teste: #{index.mensagem}
+			teste: ${index.mensagem}
 		</h:form>
 	</h:body>
-</f:view>
+</html>
 

@@ -1,12 +1,24 @@
 package br.com.camtwo.spring.jsf.controller;
 
+import javax.annotation.PostConstruct;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+
+import br.com.camtwo.spring.jsf.service.IndexService;
 
 @Controller("index")
 public class IndexMB {
 
 	private String titulo = "Teste de titulo";
-	private String mensagem = "Teste de mensagem";
+	
+	@Autowired
+	private IndexService indexService;
+	
+	@PostConstruct
+	public void init(){
+		titulo = "Teste de titulo";
+	}
 
 	public String getTitulo() {
 		return titulo;
@@ -17,11 +29,7 @@ public class IndexMB {
 	}
 
 	public String getMensagem() {
-		return mensagem;
-	}
-
-	public void setMensagem(String mensagem) {
-		this.mensagem = mensagem;
+		return indexService.mensagem();
 	}
 
 }
