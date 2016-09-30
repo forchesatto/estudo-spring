@@ -1,24 +1,13 @@
 package br.com.camtwo.spring.jspjpa;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.support.SpringBootServletInitializer;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@Configuration
-@EnableAutoConfiguration
-@ComponentScan
-public class MainServer extends SpringBootServletInitializer {
+@SpringBootApplication
+public class MainServer {
 
 	public static void main( String[] args )    {
         SpringApplication.run(MainServer.class, args);
-    }
-
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(MainServer.class);
     }
 
 }
