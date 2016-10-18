@@ -11,9 +11,14 @@
 <!-- Bootstrap -->
 <link href="<c:url value="/static/css/bootstrap.min.css"/>"
 	rel="stylesheet">
-	
-	<link href="<c:url value="/static/css/style.css"/>"
+
+<link href="<c:url value="/static/css/style.css"/>" rel="stylesheet">
+
+<link href="<c:url value="/static/css/jquery-ui.min.css"/>"
 	rel="stylesheet">
+<link href="<c:url value="/static/css/jquery-ui.structure.min.css"/>"
+	rel="stylesheet">
+
 
 <link
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"
@@ -28,6 +33,7 @@
 </head>
 <body>
 
+	<p></p>
 	<div class="container">
 		<div class="row">
 
@@ -43,6 +49,12 @@
 								<a class="btn btn-sm btn-primary btn-create"
 									href="<c:url value="/tipoProduto/novo"/>"> Novo</a>
 							</div>
+							<div class="col col-xs-6">
+								<a href="#" onclick="tiposProduto()"> Lista tipos AJAX </a> 
+								<input type="text" id="tipoProdutoAutoComplete" />
+								<input type="hidden" id="tipoProduto-codigo" 
+										name="tipoProduto.codigo"/>
+							</div>
 						</div>
 					</div>
 					<div class="panel-body">
@@ -57,16 +69,13 @@
 							<tbody>
 								<c:forEach items="${tiposProduto}" var="tipoProduto">
 									<tr>
-										<td align="center">
-											<a href="<c:url value="/tipoProduto/${tipoProduto.codigo}"/>" 
-												class="btn btn-default">
-												<i class="fa fa-pencil"></i> 
-											</a> 
-											<a href="<c:url value="/tipoProduto/${tipoProduto.codigo}/delete"/>" 
-												class="btn btn-danger">
-												<i class="fa fa-trash"></i>
-											</a>
-										</td>
+										<td align="center"><a
+											href="<c:url value="/tipoProduto/${tipoProduto.codigo}"/>"
+											class="btn btn-default"> <i class="fa fa-pencil"></i>
+										</a> <a
+											href="<c:url value="/tipoProduto/${tipoProduto.codigo}/delete"/>"
+											class="btn btn-danger"> <i class="fa fa-trash"></i>
+										</a></td>
 										<td class="hidden-xs">${tipoProduto.codigo}</td>
 										<td>${tipoProduto.nome}</td>
 									</tr>
@@ -86,8 +95,8 @@
 									<li><a href="#">5</a></li>
 								</ul>
 								<ul class="pagination visible-xs pull-right">
-									<li><a href="#">«</a></li>
-									<li><a href="#">»</a></li>
+									<li><a href="#"></a></li>
+									<li><a href="#"></a></li>
 								</ul>
 							</div>
 						</div>
@@ -96,14 +105,19 @@
 			</div>
 		</div>
 	</div>
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
+
+	<script src="<c:url value="/static/js/jquery-3.1.1.min.js"/>"></script>
 	<script src="<c:url value="/static/js/bootstrap.min.js"/>"></script>
-	
-<!-- exemplo com método delete <form:form method="delete"> -->
-<!--     <p class="submit"><input type="submit" value="Delete Pet"/></p> -->
-<!-- </form:form> -->
+	<script src="<c:url value="/static/js/jquery-ui.min.js"/>"></script>
+
+	<script src="<c:url value="/static/js/tipoProduto.js"/>"></script>
+
+	<script type="text/javascript">
+		autoCompleteTipoProduto();
+	</script>
+	<div id="retorno">
+	<!-- aqui vai o conteÃºdo dinÃ¢mico -->
+	</div>
+
 </body>
 </html>

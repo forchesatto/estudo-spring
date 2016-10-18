@@ -1,6 +1,6 @@
-package br.com.camtwo.spring.jspjpa.controller.test;
+package br.edu.utfpr.spring.mvc.controller.test;
 
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,19 +11,21 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
-import br.com.camtwo.spring.jspjpa.controller.IndexController;
+import br.edu.utfpr.spring.mvc.controller.IndexController;
+
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(controllers=IndexController.class)
 public class IndexControllerTest {
-
+	
 	@Autowired
 	private MockMvc mvc;
-
+	
 	@Test
-	public void testIndexControllerGetConteudo() throws Exception {
+	public void deveAcharIndex() throws Exception{
 		mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.TEXT_HTML))
-			.andExpect(status().isOk());
+		.andExpect(status().isOk());
 	}
 
 }

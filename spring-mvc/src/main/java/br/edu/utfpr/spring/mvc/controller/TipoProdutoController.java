@@ -2,13 +2,17 @@ package br.edu.utfpr.spring.mvc.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import br.edu.utfpr.spring.mvc.model.TipoProduto;
 import br.edu.utfpr.spring.mvc.repository.TipoProdutoRepository;
@@ -28,7 +32,11 @@ public class TipoProdutoController {
 	}
 	
 	@PostMapping("/")
-	public String salvar(TipoProduto tipoProduto, Model model){
+	public String salvar(@Valid TipoProduto tipoProduto, BindingResult erros,
+			Model model){
+		if(erros.hasErrors()){
+			return "/tipoProduto/novo";	
+		}
 		tipoProdutoRepository.save(tipoProduto);
 		return "redirect:/tipoProduto/";
 	}
@@ -49,6 +57,12 @@ public class TipoProdutoController {
 	public String delete(@PathVariable Long codigo){
 		tipoProdutoRepository.delete(codigo);
 		return "redirect:/tipoProduto/";
+	}
+	
+	@GetMapping(path="/json")
+	@ResponseBody
+	public List<TipoProduto> json(){
+		return tipoProdutoRepository.findAll();
 	}
 	
 }

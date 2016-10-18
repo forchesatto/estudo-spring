@@ -1,8 +1,13 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="utf-8">
+	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -20,28 +25,27 @@
 </head>
 <body>
 	<form class="form-horizontal" action="<c:url value="/tipoProduto/"/>" method="post">
-	
 		<input type="hidden" name="codigo" value="${tipoProduto.codigo}">
 		<fieldset>
 
-			<legend>Tipo de Produto</legend>
+			<legend><spring:message code="tipoProduto.title"/></legend>
 			
 			<div class="form-group">
 				<label class="col-md-4 control-label" for="nome">Nome</label>
 				<div class="col-md-4">
 					<input id="nome" name="nome" type="text" placeholder=""
 						class="form-control input-md" value="${tipoProduto.nome}">
-
+					<form:errors path="tipoProduto.nome" cssClass="alert-danger"/>
 				</div>
 			</div>
 
 			<div class="form-group">
 				<label class="col-md-4 control-label" for="valorMinimo">Valor
-					mínimo</label>
+					mí­nimo</label>
 				<div class="col-md-2">
 					<input id="valorMinimo" name="valorMinimo" type="text"
 						placeholder="" class="form-control input-md" value="${tipoProduto.valorMinimo}">
-
+					<form:errors path="tipoProduto.valorMinimo" />
 				</div>
 			</div>
 
