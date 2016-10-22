@@ -2,6 +2,7 @@ package br.edu.utfpr.spring.mvc.controller.test;
 
 
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,7 @@ public class IndexControllerTest {
 	private MockMvc mvc;
 	
 	@Test
+	@Ignore
 	public void deveAcharIndex() throws Exception{
 		mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.TEXT_HTML))
 		.andExpect(status().isOk());

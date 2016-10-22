@@ -11,13 +11,19 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
 @EqualsAndHashCode(of = "nome")
+@NoArgsConstructor
 public class TipoProduto {
+
+	public TipoProduto(Long codigo) {
+		this.codigo = codigo;
+	}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
