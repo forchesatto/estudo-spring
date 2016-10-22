@@ -49,6 +49,6 @@
 			</div>
 		</fieldset>	
 	</form>
-
+	<a href="/usuario/" id="novoUsuario" class="btn btn-secundary">Novo usuário</a>
 </body>
 </html>
