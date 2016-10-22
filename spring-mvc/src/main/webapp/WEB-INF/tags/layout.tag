@@ -36,7 +36,5 @@
 	<script src="<c:url value="/static/js/jquery-3.1.1.min.js"/>"></script>
 	<script src="<c:url value="/static/js/bootstrap.min.js"/>"></script>
 	<script src="<c:url value="/static/js/jquery-ui.min.js"/>"></script>
-	
-	<jsp:invoke fragment="scriptsEspecificos"></jsp:invoke>
 </body>
 </html>
