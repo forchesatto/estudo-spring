@@ -5,6 +5,13 @@
 <%@ taglib prefix="layout" uri="http://utfpr.edu/jsp/layout"%>
 
 <layout:template>
+	<jsp:attribute name="scriptsEspecificos">
+		<script src="<c:url value="/static/js/tipoProduto.js"/>"></script>
+
+		<script type="text/javascript">
+			autoCompleteTipoProduto();
+		</script>
+	</jsp:attribute>
 	<jsp:body>
 	<form class="form-horizontal" action="<c:url value="/produto/"/>"
 			method="post">

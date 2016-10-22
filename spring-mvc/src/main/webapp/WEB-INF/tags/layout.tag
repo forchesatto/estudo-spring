@@ -1,6 +1,8 @@
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core"			prefix="c" %>
-    
+
+<%@ attribute name="scriptsEspecificos"	fragment="true"		required="false" %>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -36,5 +38,7 @@
 	<script src="<c:url value="/static/js/jquery-3.1.1.min.js"/>"></script>
 	<script src="<c:url value="/static/js/bootstrap.min.js"/>"></script>
 	<script src="<c:url value="/static/js/jquery-ui.min.js"/>"></script>
+	
+	<jsp:invoke fragment="scriptsEspecificos"></jsp:invoke>
 </body>
 </html>
