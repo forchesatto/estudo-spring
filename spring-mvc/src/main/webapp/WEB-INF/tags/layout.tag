@@ -1,5 +1,6 @@
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core"			prefix="c" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 <%@ attribute name="scriptsEspecificos"	fragment="true"		required="false" %>
 
@@ -29,7 +30,8 @@
 </head>
 <body>
 
-
+	<sec:authentication property="principal.nome" />
+	
 	<!-- conteúdo principal -->
 	<div class="">
 		<jsp:doBody />

@@ -53,7 +53,6 @@ public class ProdutoController {
 	@GetMapping("/novo")
 	public String novo(Model model){
 		model.addAttribute("tiposProdutos", tipoProdutoRepository.findAll());
-		model.addAttribute("produto",new Produto());
 		return "/produto/novo";
 	}
 	

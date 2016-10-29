@@ -54,13 +54,14 @@
 			</div>
 
 
-			<!-- 			<div class="form-group"> -->
-			<!-- 				<label class="col-md-4 control-label" for="tipoProdutoSelect">Tipo produto</label> -->
-			<!-- 				<div class="col-md-2"> -->
-			<%-- 					<form:select path="tipoProduto.codigo" --%>
-			<%-- 						items="${tiposProdutos}"/> --%>
-			<!-- 				</div> -->
-			<!-- 			</div> -->
+<!-- 						<div class="form-group"> -->
+<!-- 							<label class="col-md-4 control-label" for="tipoProdutoSelect">Tipo produto</label> -->
+<!-- 							<div class="col-md-2"> -->
+<%-- 								<form:select path="tipoProduto.codigo" items="${tiposProdutos}" itemLabel="nome" itemValue="codigo"> --%>
+<%-- 								</form:select> --%>
+			
+<!-- 							</div> -->
+<!-- 						</div> -->
 
 
 
