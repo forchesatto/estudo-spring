@@ -1,6 +1,5 @@
 package br.edu.utfpr.spring.mvc.controller;
 
-import org.hibernate.jpa.criteria.compile.RenderingContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
