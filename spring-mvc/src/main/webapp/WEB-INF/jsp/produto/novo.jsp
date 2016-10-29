@@ -4,6 +4,8 @@
 
 <%@ taglib prefix="layout" uri="http://utfpr.edu/jsp/layout"%>
 
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+
 <layout:template>
 	<jsp:attribute name="scriptsEspecificos">
 		<script src="<c:url value="/static/js/tipoProduto.js"/>"></script>

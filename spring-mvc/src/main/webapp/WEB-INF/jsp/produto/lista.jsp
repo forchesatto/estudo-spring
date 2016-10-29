@@ -34,6 +34,7 @@
 <body>
 
 	<p></p>
+	<p>${nomeUsuario}</p>
 	<div class="container">
 		<div class="row">
 

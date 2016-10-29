@@ -1,6 +1,7 @@
 package br.edu.utfpr.spring.mvc.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -14,8 +15,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.edu.utfpr.spring.mvc.model.Produto;
+import br.edu.utfpr.spring.mvc.model.Usuario;
 import br.edu.utfpr.spring.mvc.repository.ProdutoRepository;
 import br.edu.utfpr.spring.mvc.repository.TipoProdutoRepository;
+import br.edu.utfpr.spring.mvc.seguranca.UsuarioLogado;
 
 @Controller
 @RequestMapping("/produto")
@@ -26,10 +29,17 @@ public class ProdutoController {
 	@Autowired
 	private TipoProdutoRepository tipoProdutoRepository;
 	
+	@Autowired
+	private UsuarioLogado usuarioLogado;
+	
+	
 	@GetMapping("/")
 	public String lista(Model model){
 		List<Produto> produtos = produtoRepository.findAllEager();
 		model.addAttribute("produtos",produtos);
+		usuarioLogado.get().ifPresent(usuario->{
+			model.addAttribute("nomeUsuario", usuario.getNome());
+		});
 		return "/produto/lista";
 	}
 	
